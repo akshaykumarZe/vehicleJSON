@@ -16,14 +16,18 @@ const topic = process.env.KAFKA_TOPIC ;
 const key = 'static-key'; // Define key to avoid ReferenceError
 
 function getVehicleTrackingJson() {
+  const now = new Date();
+  const istTime = now.toLocaleString("en-IN", { timeZone: "Asia/Kolkata", hour12: false });
+
   return {
-      vehicleID: `VEHICLE-${Math.floor(Math.random() * 5) + 1}`,
-      speed: Math.floor(Math.random() * 120), // Random speed between 0-120 km/h
-      fuelLevel: Math.floor(Math.random() * 100), // Random fuel level between 0-100%
-      latitude: (Math.random() * 180 - 90).toFixed(6), // Random latitude
-      longitude: (Math.random() * 360 - 180).toFixed(6), // Random longitude
-      engineTemp: Math.floor(Math.random() * (120 - 70) + 70)
-  }
+    vehicleID: `VEHICLE-${Math.floor(Math.random() * 5) + 1}`,
+    speed: Math.floor(Math.random() * 120), // Random speed between 0-120 km/h
+    fuelLevel: Math.floor(Math.random() * 100), // Random fuel level between 0-100%
+    latitude: (Math.random() * 180 - 90).toFixed(6), // Random latitude
+    longitude: (Math.random() * 360 - 180).toFixed(6), // Random longitude
+    engineTemp: Math.floor(Math.random() * (120 - 70) + 70),
+    timestamp: istTime
+  };
 }
 
   async function sendMessage() {
