@@ -7,7 +7,7 @@ const kafka = new Kafka({
   sasl: {
     mechanism: "scram-sha-512",
     username:  "oytw1vq1ttl56dqorx5nd41pf", // Use env variable for security
-    password:  "S8sgwCJaunN3AKZ9i55GaEyi3RQf0rWX",
+    password:  "TNIfVEwANdxNu5gc1l4XKibQIlXUzBDZ",
   }
 });
 
