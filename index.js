@@ -6,8 +6,8 @@ const kafka = new Kafka({
   brokers: ['my-cluster-kafka-bootstrap.kafka.svc:9092'],
   sasl: {
     mechanism: "scram-sha-512",
-    username:  "0doou5rsv77d48yi0ofy9598p", // Use env variable for security
-    password:  "MwAtHec87kqcOrqiH7dGTur6VOBh1wPX",
+    username:  "2s6yyuuj7ti9xyey9xkrk9wg3", // Use env variable for security
+    password:  "BL84FHN38TtGSq8FcVq5Ey5qXrtUzV0l",
   }
 });
 
