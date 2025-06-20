@@ -43,7 +43,7 @@ function getVehicleTrackingJson() {
         ]
       });
       console.log('Message sent:', value);
-    }, 3000); // Sending message every 3 seconds
+    }, 30000); // Sending message every 3 seconds
   }
   
   sendMessage().catch(console.error);
