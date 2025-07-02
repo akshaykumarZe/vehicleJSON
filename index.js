@@ -6,8 +6,8 @@ const kafka = new Kafka({
   brokers: ['my-cluster-kafka-bootstrap.kafka.svc:9092'],
   sasl: {
     mechanism: "scram-sha-512",
-    username:  "co9y49xxl0gz8qvsvgbbxqhse", // Use env variable for security
-    password:  "p7srxjR11kdJyUTDzkz4FuUxyzNQMUqM",
+    username:  "igx4vuorw5ol2t3gmj7u3blnh", // Use env variable for security
+    password:  "fmHY1GtFumSgVmYKwPeoeB69Ck1XpwtK",
   }
 });
 
@@ -43,7 +43,7 @@ function getVehicleTrackingJson() {
         ]
       });
       console.log('Message sent:', value);
-    }, 30000); // Sending message every 3 seconds
+    }, 30000); // Sending message every 30 seconds
   }
   
   sendMessage().catch(console.error);
