@@ -1,23 +1,23 @@
-# Use an official Node.js image as the base
+# Use an official Node.js image as the base (Alpine is lightweight)
 FROM node:18-alpine
+
+# Set environment variables (optional, can help with performance and logging)
+ENV NODE_ENV=production
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to leverage caching
+# Copy package.json and package-lock.json to leverage Docker layer caching
 COPY package*.json ./
 
-# Install Node.js dependencies
-RUN npm install
+# Install only production dependencies
+RUN npm install --only=production
 
 # Copy the rest of the application code
 COPY . .
 
-# Expose the application port (if required)
-# EXPOSE 3000 # Uncomment if the app uses a specific port
+# Expose the application port (adjust according to your app)
+EXPOSE 3000
 
-# Set environment variables (optional, prefer .env for secrets)
-# ENV NODE_ENV=production
-
-# Specify the command to run the application
+# Start the application (adjust if you're not using an index.js entry point)
 CMD ["node", "index.js"]
