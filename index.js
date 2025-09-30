@@ -39,7 +39,7 @@ function getVehicleTrackingJson() {
       await producer.send({
         topic,
         messages: [
-          { key, value: JSON.stringify(value) }
+           value 
         ]
       });
       console.log('Message sent:', value);
