@@ -1,5 +1,5 @@
 const { Kafka } = require('kafkajs');
-//require('dotenv').config();
+require('dotenv').config();
 
 const kafka = new Kafka({
   clientId: 'tracking-producer-nestedJSON',
