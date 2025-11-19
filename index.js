@@ -26,7 +26,7 @@ function getVehicleTrackingJson() {
     latitude: (Math.random() * 180 - 90).toFixed(6), // Random latitude
     longitude: (Math.random() * 360 - 180).toFixed(6), // Random longitude
     engineTemp: Math.floor(Math.random() * (120 - 70) + 70),
-    timestamp: istTime
+   // timestamp: istTime
   };
 }
 
