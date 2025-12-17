@@ -12,7 +12,8 @@ const kafka = new Kafka({
 });
 
 const producer = kafka.producer();
-const topic = process.env.KAFKA_TOPIC ;
+//const topic = process.env.KAFKA_TOPIC ;
+const topic = 'new-ak-topic-001'
 const key = 'static-key'; // Define key to avoid ReferenceError
 
 function getVehicleTrackingJson() {
@@ -26,7 +27,7 @@ function getVehicleTrackingJson() {
     latitude: (Math.random() * 180 - 90).toFixed(6), // Random latitude
     longitude: (Math.random() * 360 - 180).toFixed(6), // Random longitude
     engineTemp: Math.floor(Math.random() * (120 - 70) + 70),
-   // timestamp: istTime
+    timestamp: istTime
   };
 }
 
