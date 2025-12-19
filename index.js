@@ -12,8 +12,8 @@ const kafka = new Kafka({
 });
 
 const producer = kafka.producer();
-//const topic = process.env.KAFKA_TOPIC ;
-const topic = 'new-ak-topic-001'
+const topic = process.env.KAFKA_TOPIC ;
+//const topic = 'new-ak-topic-001'
 const key = 'static-key'; // Define key to avoid ReferenceError
 
 function getVehicleTrackingJson() {
